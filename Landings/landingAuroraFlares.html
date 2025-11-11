@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora Flares</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #05050d, #271a2c);
+      overflow-x: hidden;
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(180deg, #010006, #18111f);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .hero button {
+      background-color: #2f274c;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      padding: 15px 40px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero button:hover {
+      background-color: #3c2d70;
+      transform: translateY(-4px);
+    }
+
+    .split {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .split2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #191120, #311e34);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 650px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      animation: slideUp 1.5s ease forwards;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card img {
+      width: 350px;
+      height: 350px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    img.cardsplit {
+      width: 150px; 
+      height: 150px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      flex: 1;
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .card p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #f5f5f5;
+    }
+
+    .connect-card {
+      margin: 0 auto;
+      background: linear-gradient(180deg, #191120, #311e34);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 40px;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .connect-card h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .connect-card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, #010006, #18111f);
+    }
+
+    footer img {
+      width: 160px;
+      margin: 30px 0;
+    }
+
+    footer p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      font-size: 3rem;
+      margin: 30px 0;
+    }
+
+    .icons a {
+      color: #fff;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .icons a:hover {
+      color: #a388ff;
+      transform: scale(1.15);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1rem; }
+      .split { flex-direction: column; }
+      .card { flex-direction: column; text-align: center; }
+      .card img { width: 100%; height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Aurora Flares</h1>
+    <p>Um projeto para o Hackaton Nasa Space Apps Challenges 2025</p>
+    <button onclick="scrollToSection()">Saiba mais ↓</button>
+  </section>
+
+  <section class="split2" id="info2">
+    <div class="card">
+      <div class="card-content">
+        <h2>O que é o projeto Aurora Flares?</h2>
+        <p>O projeto surgiu em setembro de 2025, por uma equipe de pessoas determinadas a participar do Nasa Space Apps Challenge 2025.</p>
+        <p>Com foco em contar os impactos do Clima Espacial de forma infantil através da Tecnologia e Animação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="split" id="info">
+
+    <div class="card">
+      <img src="../assets/images/AuroraFlares/Spline 3D.png" alt="Home do app"/>
+      <div class="card-content">
+        <h2>Spline 3D</h2>
+        <p>Com a ferramenta Spline, conseguimos dar vida a nossa história de maneira divertida e bem visual.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../assets/images/AuroraFlares/ThreeJs.png" alt="Home do app"/>
+      <div class="card-content">
+        <h2>Three.js</h2>
+        <p>
+          Apesar da incrivel animação do Spline 3D, decidimos ir além. Com força de vontade e IA, usamos a biblioteca Three.js para fazer
+          um mini game estilo asteroids, onde o usuário deve desviar dos asteroides por 30 segundos para prosseguir na história.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="split">
+    <div class="card">
+      <img src="../assets/images/AuroraFlares/home.png" alt="Assistente jurídica" />
+      <div class="card-content">
+        <h2>Resultado</h2>
+        <p>Apesar dos contratempos e dificuldades, o projeto foi entregue no prazo. Um time que deu tudo de sí, ignorando a falta de experiência por força de vontade e mão na massa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="connect-card">
+      <h2>Acompanhe o Projeto pelo GitHub</h2>
+
+      <div class="icons">
+        <a href="https://github.com/JuniorGCY/AuroraFlaresProject" target="_blank" title="GitHub" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Aurora Flares</p>
+  </footer>
+
+  <script>
+    function scrollToSection() {
+      document.getElementById("info").scrollIntoView({ behavior: "smooth" });
+    }
+    const cards = document.querySelectorAll(".card");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>

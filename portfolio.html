@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Euvaldo Júnior</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top left, #1b1b1e, #0e0e10 80%);
+      color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      position: relative;
+      scroll-behavior: smooth;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 25px 25px;
+      z-index: 0;
+    }
+
+    header {
+      text-align: center;
+      margin: 60px 0 40px;
+      z-index: 1;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #a86df7, #1e90ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1px;
+    }
+
+    section {
+      width: 100%;
+      padding: 0 40px;
+      margin-bottom: 70px;
+      z-index: 1;
+    }
+
+    section h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 80px 0 40px;
+      background: linear-gradient(90deg, #a86df7, #1e90ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .projects {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 0;
+    }
+
+    .card {
+      background: rgba(36, 36, 40, 0.9);
+      border-radius: 25px;
+      width: 500px; 
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      cursor: pointer;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px rgba(150, 77, 255, 0.25);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.7));
+      z-index: 0;
+    }
+
+    .card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 25px;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover img {
+      opacity: 0.8;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 1;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: #111;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #1e65ff, #470b63);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 18px 0;
+    }
+
+    .tech-stack {
+      font-size: 0.85rem;
+      color: #ffffff;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .icons {
+      display: flex;
+      gap: 16px;
+      margin-top: 15px;
+    }
+
+    .icons a {
+      font-size: 1.3rem;
+      color: #cfcfcf;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .icons a:hover {
+      color: #a86df7;
+      transform: scale(1.1);
+    }
+
+    .badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: linear-gradient(90deg, #ff9900, #ff5e00);
+      color: #fff;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 150, 0, 0.5);
+      z-index: 2;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 900px) {
+      section {
+        padding: 0 20px;
+      }
+      .card {
+        width: 100%;
+      }
+      header h1, section h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Portfólio</h1>
+  </header>
+
+  <section>
+    <div class="projects">
+      <div class="card">
+        <img src="assets/images/ProjetoAmparo/Logo.png" alt="Projeto Amparo">
+        <div class="card-content">
+          <h3>Projeto Amparo</h3>
+          <p>App criado para ajudar mulheres em situação de violência, oferecendo informações, contatos e recursos de apoio.</p>
+          <a href="Landings/landingAmparo.html" class="btn" target="_blank" rel="noopener noreferrer">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+          <div class="divider"></div>
+          <div class="tech-stack">React Native • Firebase • SQLite • Expo • OpenAI API</div>
+          <div class="icons">
+            <a href="#"><i class="fab fa-apple"></i></a>
+            <a href="#"><i class="fab fa-android"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h1>Projetos</h1>
+    <div class="projects">
+
+      <div class="card">
+        <span class="badge">Hackathon NASA 2025</span>
+        <img src="assets/images/AuroraFlares/logo.jpg" alt="Aurora Flares">
+        <div class="card-content">
+          <h3>Aurora Flares</h3>
+          <p>Projeto desenvolvido para o NASA Space Apps Challenge, com HTML, CSS e Three.js criando uma experiência 3D interativa.</p>
+          <a href="Landings/landingAuroraFlares.html" class="btn" target="_blank" rel="noopener noreferrer">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+          <div class="divider"></div>
+          <div class="tech-stack">HTML • CSS • JavaScript • Three.js</div>
+          <div class="icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/images/RedZoneInformatica/Logo.png" alt="RedZone">
+        <div class="card-content">
+          <h3>RedZone - Informática</h3>
+          <p>Aplicativo criado para o TCC dos meus amigos, feito em colaboração com eles. Com autenticação e banco de dados integrados via Firebase.</p>
+          <a href="Landings/landingRedZone.html" class="btn" target="_blank" rel="noopener noreferrer">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+          <div class="divider"></div>
+          <div class="tech-stack">React Native • Firebase Auth • Firestore</div>
+          <div class="icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousedown', () => card.style.transform = 'scale(0.97)');
+      card.addEventListener('mouseup', () => card.style.transform = '');
+      card.addEventListener('mouseleave', () => card.style.transform = '');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Sobre Mim | Euvaldo Júnior</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background-color: #1c1c1f;
+      color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding: 60px 20px;
+      overflow-y: auto;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 30px 30px;
+      z-index: 0;
+    }
+
+    .container {
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 1000px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .card {
+      background-color: #242428;
+      border-radius: 25px;
+      padding: 50px;
+      text-align: left;
+      width: 100%;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 35px rgba(150, 77, 255, 0.25);
+    }
+
+    .profile-pic {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.3);
+      background: url('assets/images/profile.jpg') center/cover no-repeat, rgba(255,255,255,0.05);
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .subtitle {
+      background: linear-gradient(90deg, #1e65ff, #7d08b3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .name {
+      font-size: 2.3rem;
+      margin: 10px 0 20px 0;
+    }
+
+    .description {
+      color: #eaeaea;
+      line-height: 1.6;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .skills {
+      margin-bottom: 35px;
+    }
+
+    .skills h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #b84de8;
+    }
+
+    .skills ul {
+      list-style: none;
+      margin-left: 5px;
+    }
+
+    .skills ul li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+
+    .skills i {
+      color: #a86df7;
+      font-size: 1.1rem;
+    }
+
+    .btn-gradient {
+      display: inline-block;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      background: linear-gradient(90deg, #1e65ff, #7d08b3);
+      color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-gradient:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px rgba(184, 77, 232, 0.4);
+    }
+
+    .socials {
+      margin-top: 30px;
+    }
+
+    .socials a {
+      color: #fff;
+      font-size: 1.8rem;
+      margin-right: 18px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #a86df7;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 30px;
+      }
+      .name {
+        font-size: 1.8rem;
+      }
+      .description {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="profile-pic"></div>
+      <h4 class="subtitle">REACT NATIVE DEVELOPER</h4>
+      <h1 class="name">Euvaldo G C Júnior</h1>
+
+      <p class="description">
+        Tenho 20 anos e sou Desenvolvedor Mobile Júnior, focado em criar soluções intuitivas e funcionais com React Native. 
+        Busco unir tecnologia e propósito através dos meus projetos, como o <b>Projeto Amparo</b>, desenvolvido de forma voluntária.
+        Sou curioso, analítico e focado em aprendizado constante — sempre aberto a desafios que me façam evoluir técnica e pessoalmente.
+      </p>
+
+      <div class="skills">
+        <h3><i class="fas fa-code"></i> Hard Skills</h3>
+        <ul>
+          <li><i class="fab fa-react"></i> React Native</li>
+          <li><i class="fab fa-js-square"></i> JavaScript</li>
+          <li><i class="fas fa-cloud"></i> Firebase (Auth / Firestore)</li>
+          <li><i class="fas fa-database"></i> SQLite</li>
+          <li><i class="fas fa-pen-nib"></i> Figma</li>
+          <li><i class="fab fa-git-alt"></i> GitHub / Trello</li>
+          <li><i class="fas fa-robot"></i> OpenAI API</li>
+        </ul>
+      </div>
+
+      <div class="skills">
+        <h3><i class="fas fa-brain"></i> Soft Skills</h3>
+        <ul>
+          <li><i class="fas fa-hand-holding-heart"></i> Empatia e ética</li>
+          <li><i class="fas fa-hourglass-half"></i> Calma sob pressão</li>
+          <li><i class="fas fa-sync-alt"></i> Adaptabilidade</li>
+          <li><i class="fas fa-comments"></i> Abertura a feedback</li>
+          <li><i class="fas fa-bolt"></i> Foco em soluções práticas</li>
+        </ul>
+      </div>
+
+      <a href="portfolio.html" class="btn-gradient" target="_self">
+        Ver Portfólio <i class="fas fa-arrow-right"></i>
+      </a>
+
+      <div class="socials">
+        <a href="https://github.com/JuniorGCY" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/juniorgcyx/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:ejunior.mobiledev@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/júnior-gomes-carneirodev" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

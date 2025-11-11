@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Amparo</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #290052, #13031a);
+      overflow-x: hidden;
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(180deg, #542485, #1b073b);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .hero button {
+      background-color: #866bff;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      padding: 15px 40px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero button:hover {
+      background-color: #a388ff;
+      transform: translateY(-4px);
+    }
+
+    .split {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .split2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #512480, #0c031a);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 650px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      animation: slideUp 1.5s ease forwards;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card img {
+      width: 350px;
+      height: 350px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    img.cardsplit {
+      width: 150px; 
+      height: 150px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      flex: 1;
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .card p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #f5f5f5;
+    }
+
+    .connect-card {
+      margin: 0 auto;
+      background: linear-gradient(180deg, #542485, #1b073b);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 40px;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .connect-card h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .connect-card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, #542485, #1b073b);
+    }
+
+    footer img {
+      width: 160px;
+      margin: 30px 0;
+    }
+
+    footer p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      font-size: 3rem;
+      margin: 30px 0;
+    }
+
+    .icons a {
+      color: #fff;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .icons a:hover {
+      color: #a388ff;
+      transform: scale(1.15);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1rem; }
+      .split { flex-direction: column; }
+      .card { flex-direction: column; text-align: center; }
+      .card img { width: 100%; height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Projeto Amparo</h1>
+    <p>O Projeto Amparo busca ser um aliado das mulheres vítimas de violência, oferecendo informação e acessibilidade por meio de um aplicativo simples e seguro.</p>
+    <button onclick="scrollToSection()">Saiba mais ↓</button>
+  </section>
+
+  <section class="split2" id="info2">
+    <div class="card">
+      <img src="../assets/images/ProjetoAmparo/Logo.png" alt="Sobre o projeto" class="cardsplit"/>
+      <div class="card-content">
+        <h2>O que é o projeto Amparo?</h2>
+        <p>O Projeto Amparo é uma plataforma digital dedicada ao apoio integral de mulheres vítimas de violência sexual. Oferecemos suporte jurídico, psicossocial e comunitário através de recursos tecnológicos seguros e acessíveis.</p>
+        <p>Nossa missão é proporcionar ferramentas de proteção, orientação e acolhimento, conectando mulheres em situação de vulnerabilidade com redes de apoio especializadas e recursos de emergência.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="split" id="info">
+
+    <div class="card">
+      <img src="../assets/images/ProjetoAmparo/manualfuga.png" alt="Home do app"/>
+      <div class="card-content">
+        <h2>Manual de Fuga</h2>
+        <p>Amparo dispoe função de organização de plano da situação e gerar em PDF para salvar e compartilhar</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../assets/images/ProjetoAmparo/home.jpg" alt="Home do app"/>
+      <div class="card-content">
+        <h2>Home, a porta de entrada</h2>
+        <p>Amparo se preocupa em ser bem receptivo logo na entrada e fornecer as principais funções disponíveis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="split">
+    <div class="card">
+      <img src="../assets/images/ProjetoAmparo/chatjuridico.jpg" alt="Assistente jurídica" />
+      <div class="card-content">
+        <h2>Assistente Jurídica</h2>
+        <p>
+          Olá! Sou a assistente jurídica do Projeto Amparo. Posso ajudar com informações sobre seus direitos legais, medidas protetivas, 
+          boletins de ocorrência e questões relacionadas à violência contra a mulher.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../assets/images/ProjetoAmparo/apoiopsicologico.jpg" alt="Aplicativo Amparo" />
+      <div class="card-content">
+        <h2>Um aplicativo que acolhe e orienta</h2>
+        <p>O Amparo foi desenvolvido para fornecer informações sobre direitos, canais de denúncia e serviços de apoio. Nosso objetivo é tornar o acesso à ajuda mais rápido, claro e humano.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="connect-card">
+      <h2>Conecte-se ao Amparo</h2>
+
+      <p>Em breve, disponivel para Android e IOS</p>
+
+      <div class="icons">
+        <a href="#" title="Baixar para iOS"><i class="fab fa-apple"></i></a>
+        <a href="#" title="Baixar para Android"><i class="fab fa-android"></i></a>
+      </div>
+
+      <p>Acompanhe o Projeto pelas redes sociais</p>
+
+      <div class="icons">
+        <a href="https://linktr.ee/amparoofc?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnhSeh6pOdTl9i83xtXKNuW-jl3AQyJIrcqfQkMxc8RAxDfJHXFYt87y5Q8jg_aem_VBwN0LR0Yo9c-sOJQ_rI_Q" target="_blank" title="Site do Projeto" rel="noopener noreferrer" ><i class="fas fa-link"></i></a>
+        <a href="https://github.com/JuniorGCY/Apps-Desenvolvimento/tree/main/ProjetoAmparo" target="_blank" title="GitHub" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h2>Projeto Amparo</h2>
+    <p>Tecnologia a serviço da empatia e da segurança das mulheres. Juntas, somos mais fortes.</p>
+    <p>Apoie e compartilhe o Projeto Amparo.</p>
+    <img src="../assets/images/ProjetoAmparo/Logo.png" alt="Laço Roxo" />
+    <p>© 2025 Projeto Amparo</p>
+  </footer>
+
+  <script>
+    function scrollToSection() {
+      document.getElementById("info").scrollIntoView({ behavior: "smooth" });
+    }
+    const cards = document.querySelectorAll(".card");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
