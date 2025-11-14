@@ -190,7 +190,7 @@
 
     .badge {
       position: absolute;
-      top: 20px;
+      top: 10px;
       left: 20px;
       background: linear-gradient(90deg, #ff9900, #ff5e00);
       color: #fff;
@@ -198,7 +198,23 @@
       font-size: 0.8rem;
       font-weight: 600;
       border-radius: 20px;
-      box-shadow: 0 0 10px rgba(255, 150, 0, 0.5);
+      box-shadow: 0 0 12px rgb(255, 208, 0);
+      z-index: 2;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .badge2 {
+      position: absolute;
+      top: 10px;
+      left: 220px;
+      background: linear-gradient(90deg, #ff9900, #ff5e00);
+      color: #fff;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 20px;
+      box-shadow: 0 0 12px rgb(255, 208, 0);
       z-index: 2;
       letter-spacing: 0.5px;
       animation: fadeIn 1.2s ease-in;
@@ -259,20 +275,30 @@
     <div class="projects">
 
       <div class="card">
-        <span class="badge">Hackathon NASA 2025</span>
+        <span class="badge">
+          Hackathon NASA 2025
+        </span>
+
+        <span class="badge2">
+          Global Nominee 🚀
+        </span>
+
         <img src="assets/images/AuroraFlares/logo.jpg" alt="Aurora Flares">
         <div class="card-content">
           <h3>Aurora Flares</h3>
           <p>Projeto desenvolvido para o NASA Space Apps Challenge, com HTML, CSS e Three.js criando uma experiência 3D interativa.</p>
-          <a href="Landings/landingAuroraFlares.html" class="btn" target="_blank" rel="noopener noreferrer">Saiba Mais <i class="fas fa-arrow-right"></i></a>
-          <div class="divider"></div>
-          <div class="tech-stack">HTML • CSS • JavaScript • Three.js</div>
-          <div class="icons">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fas fa-link"></i></a>
-          </div>
+          <a href="Landings/landingAuroraFlares.html" class="btn" target="_blank" rel="noopener noreferrer">
+            Saiba Mais <i class="fas fa-arrow-right"></i>
+          </a>
+        <div class="divider"></div>
+        <div class="tech-stack">HTML • CSS • JavaScript • Three.js</div>
+        <div class="icons">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fas fa-link"></i></a>
         </div>
-      </div>
+     </div>
+   </div>
+
 
       <div class="card">
         <img src="assets/images/RedZoneInformatica/Logo.png" alt="RedZone">
