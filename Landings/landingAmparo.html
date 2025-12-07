@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projeto Amparo</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
     * {
@@ -73,19 +71,12 @@
       transform: translateY(-4px);
     }
 
-    .split {
+    .split, .split2 {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       gap: 40px;
-    }
-
-    .split2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
     }
 
     .card {
@@ -210,13 +201,96 @@
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2.5rem; }
-      .hero p { font-size: 1rem; }
-      .split { flex-direction: column; }
-      .card { flex-direction: column; text-align: center; }
-      .card img { width: 100%; height: 200px; }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .split, .split2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .card {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+
+      .card-content {
+        text-align: center;
+      }
+
+      .card h2 {
+        font-size: 1.5rem;
+      }
+
+      .card p {
+        font-size: 1rem;
+      }
+
+      .connect-card {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .connect-card h2 {
+        font-size: 1.5rem;
+      }
+
+      .connect-card p {
+        font-size: 1rem;
+      }
+
+      footer p {
+        font-size: 1rem;
+      }
+
+      .icons {
+        gap: 20px;
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .card h2 {
+        font-size: 1.3rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+      }
+
+      .connect-card h2 {
+        font-size: 1.3rem;
+      }
+
+      .connect-card p {
+        font-size: 0.9rem;
+      }
+
+      .icons {
+        font-size: 2rem;
+        gap: 15px;
+      }
     }
   </style>
 </head>
@@ -257,7 +331,6 @@
       </div>
     </div>
 
-    
   </section>
 
   <section class="split">
@@ -284,9 +357,7 @@
   <section>
     <div class="connect-card">
       <h2>Conecte-se ao Amparo</h2>
-
       <p>Em breve, disponivel para IOS, beta Android disponivel!</p>
-
       <div class="icons">
         <a href="#" title="Baixar para iOS"><i class="fab fa-apple"></i></a>
         <a href="https://expo.dev/artifacts/eas/3QKJh8NzkFSnUaeE5L5DuK.apk" title="Baixar para Android"><i class="fab fa-android"></i></a>
@@ -295,7 +366,7 @@
       <p>Acompanhe o Projeto pelas redes sociais</p>
 
       <div class="icons">
-        <a href="https://linktr.ee/amparoofc?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnhSeh6pOdTl9i83xtXKNuW-jl3AQyJIrcqfQkMxc8RAxDfJHXFYt87y5Q8jg_aem_VBwN0LR0Yo9c-sOJQ_rI_Q" target="_blank" title="Site do Projeto" rel="noopener noreferrer" ><i class="fas fa-link"></i></a>
+        <a href="https://linktr.ee/amparoofc" target="_blank" title="Site do Projeto" rel="noopener noreferrer" ><i class="fas fa-link"></i></a>
         <a href="https://github.com/JuniorGCY/Apps-Desenvolvimento/tree/main/ProjetoAmparo" target="_blank" title="GitHub" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
       </div>
     </div>

@@ -81,7 +81,7 @@
     .card {
       background: rgba(36, 36, 40, 0.9);
       border-radius: 25px;
-      width: 500px; 
+      width: 500px;
       padding: 30px;
       position: relative;
       overflow: hidden;
@@ -229,7 +229,6 @@
       from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
     }
-
     @media (max-width: 900px) {
       section {
         padding: 0 20px;
@@ -239,6 +238,42 @@
       }
       header h1, section h1 {
         font-size: 2rem;
+      }
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .card {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .card h3 {
+        font-size: 1.3rem;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+      }
+
+      .tech-stack {
+        font-size: 0.8rem;
+      }
+
+      .icons a {
+        font-size: 1.2rem;
+      }
+
+      .badge, .badge2 {
+        font-size: 0.7rem;
+        padding: 5px 12px;
       }
     }
   </style>
@@ -273,32 +308,22 @@
   <section>
     <h1>Projetos</h1>
     <div class="projects">
-
       <div class="card">
-        <span class="badge">
-          Hackathon NASA 2025
-        </span>
-
-        <span class="badge2">
-          Global Nominee 🚀
-        </span>
-
+        <span class="badge">Hackathon NASA 2025</span>
+        <span class="badge2">Global Nominee 🚀</span>
         <img src="assets/images/AuroraFlares/logo.jpg" alt="Aurora Flares">
         <div class="card-content">
           <h3>Aurora Flares</h3>
           <p>Projeto desenvolvido para o NASA Space Apps Challenge, com HTML, CSS e Three.js criando uma experiência 3D interativa.</p>
-          <a href="Landings/landingAuroraFlares.html" class="btn" target="_blank" rel="noopener noreferrer">
-            Saiba Mais <i class="fas fa-arrow-right"></i>
-          </a>
-        <div class="divider"></div>
-        <div class="tech-stack">HTML • CSS • JavaScript • Three.js</div>
-        <div class="icons">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fas fa-link"></i></a>
+          <a href="Landings/landingAuroraFlares.html" class="btn" target="_blank" rel="noopener noreferrer">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+          <div class="divider"></div>
+          <div class="tech-stack">HTML • CSS • JavaScript • Three.js</div>
+          <div class="icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-link"></i></a>
+          </div>
         </div>
-     </div>
-   </div>
-
+      </div>
 
       <div class="card">
         <img src="assets/images/RedZoneInformatica/Logo.png" alt="RedZone">
